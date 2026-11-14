@@ -1,0 +1,4 @@
+#app-navigation img[src*="/shortcut/img/app.svg"],
+.app-navigation img[src*="/shortcut/img/app.svg"] {
+    filter: none !important;
+}
