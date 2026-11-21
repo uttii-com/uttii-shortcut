@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>shortcut</id>
+    <name>uttii-Shortcut</name>
+    <summary lang="en">Create Windows-compatible .url shortcuts and jump to deep folders inline without reloads.</summary>
+    <summary lang="ja">Windows 互換 .url ショートカットを作成し、リロードなしで高速インライン展開。</summary>
+    <description lang="en">Access deeply nested folders and key files instantly from anywhere in Nextcloud. **uttii-Shortcut** creates lightweight `.url` shortcuts that work seamlessly both on the web and in desktop sync folders.
+
+- **Instant Inline Navigation (Web UI)**: Clicking a shortcut in Nextcloud Files resolves its `fileId` and jumps straight to the target without a full page reload.
+- **Windows Desktop Compatible**: Uses standard INI `.url` format—opening synced shortcuts on Windows launches the target Nextcloud URL in your default browser.
+- **Move &amp; Rename Resilient**: Tracks targets by internal `fileId`, so shortcuts keep working even when target folders or files are renamed or moved.
+- **Batch Creation &amp; Link Cleanup**: Supports multi-item shortcut creation, external storage mounts, broken-link detection/cleanup, and EN/JA switching.</description>
+    <description lang="ja">深い階層にあるフォルダや重要ファイルへ、どこからでも一瞬でアクセスできます。**uttii-Shortcut** は Web とデスクトップ同期の双方で使える軽量な `.url` ショートカットを作成します。
+
+- **リロードなしの高速移動（Web UI）**：Nextcloud Files 上でクリックすると `fileId` を解決し、ページ再読み込みなしで即座に対象へ移動・展開します。
+- **Windows 同期フォルダ互換**：標準の `.url`（INI）形式のため、Windows 上で開いた場合は対象ページの Nextcloud URL が既定のブラウザで開きます。
+- **移動・リネーム耐性**：内部 `fileId` で追跡するため、リンク先が移動・リネームされてもリンク切れしません。
+- **一括作成・リンク切れ整理**：複数選択での一括作成、外部ストレージ、無効リンクの一括クリーンアップ、日英切替に対応しています。</description>
+    <version>0.3.0</version>
+    <licence>AGPL-3.0-or-later</licence>
+    <author mail="info@uttii.com" homepage="https://uttii.com/">uttii.com</author>
+    <website>https://app-nextcloud.uttii.com/</website>
+    <repository type="git">https://github.com/uttii-com/uttii-shortcut.git</repository>
+    <bugs>https://github.com/uttii-com/uttii-shortcut/issues</bugs>
+    <screenshot>https://raw.githubusercontent.com/uttii-com/uttii-shortcut/main/screenshots/main.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/uttii-com/uttii-shortcut/main/screenshots/ui.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/uttii-com/uttii-shortcut/main/screenshots/settings.png</screenshot>
+    <namespace>Shortcut</namespace>
+    <category>files</category>
+    <dependencies>
+        <nextcloud min-version="28" max-version="35" />
+    </dependencies>
+    <settings>
+        <personal>OCA\Shortcut\Settings\PersonalSettings</personal>
+        <personal-section>OCA\Shortcut\Settings\PersonalSection</personal-section>
+    </settings>
+</info>

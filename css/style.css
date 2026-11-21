@@ -1,0 +1,38 @@
+/**
+ * Nextcloud Shortcut App Styles
+ */
+
+/* リストビューおよびグリッドビューのショートカットアイコンに矢印バッジを付与 */
+[data-file$=".url"] .files-list__entry__icon,
+[data-file$=".url"] .thumbnail,
+tr[data-file$=".url"] .filename .thumbnail {
+    position: relative;
+}
+
+[data-file$=".url"] .files-list__entry__icon::after,
+[data-file$=".url"] .thumbnail::after,
+tr[data-file$=".url"] .filename .thumbnail::after {
+    content: "↗";
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    background: #0082c9;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 900;
+    width: 15px;
+    height: 15px;
+    line-height: 14px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* 作成時の成功トーストアニメーション */
+.shortcut-toast-success {
+    background-color: var(--color-success, #46ba61) !important;
+    color: #ffffff !important;
+}
